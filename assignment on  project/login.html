@@ -1,0 +1,54 @@
+<html> 
+<head>  
+<title>LOGIN_1</title>
+
+<script type="text/javascript">
+
+function validate()  {
+if( document.myForm.name.value == "" )
+{  alert( "Please provide your name!" );    
+   document.myForm.name.focus() ;  return false;   }
+
+if( document.myForm.userid.value == "" )
+{  alert( "Please provide your user id!" );    
+   document.myForm.userid.focus() ;  return false;   }
+
+if( document.myForm.password.value == "" )
+{  alert( "Please provide your password!" );    
+   document.myForm.password.focus() ;  return false;  
+   }
+return true;
+}
+
+</script> 
+
+</head>
+<h1><b><i><u>LOGIN PAGE</u></i></b><br><br></h1>
+ <body align="center">
+
+<form action="verify.php" name="myForm" method="post">
+
+<table cellspacing="20" cellpadding="2" border="20">
+<tr>  
+<td align="center">Name</td>
+<td><input type="text" placeholder="Enter Name" name="name" /></td>
+</tr>
+<tr>
+<td align="center">UserID</td>
+<td><input type="text" placeholder="Enter registered user id" name="userid" /></td>
+</tr>
+<tr>
+<td align="center">Password</td>
+<td><input type="password" placeholder="Enter password" name="password" /></td>
+</tr>
+<tr>
+
+<td><input type="Submit"  onclick="return(validate());" value="Submit"/>
+    <button type="Reset">Reset</button>
+</td>
+</tr>
+</table> 
+</form>
+JavaScript included in this page to check  empty fields
+</body>
+</html>
